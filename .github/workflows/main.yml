@@ -24,7 +24,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: 'npm'
       - run: |
           npm i -D typescript ts-loader webpack webpack-cli
           cd Projeto/api && npm ci
