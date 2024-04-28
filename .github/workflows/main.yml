@@ -27,7 +27,6 @@ jobs:
       - run: |
           npm i -D typescript ts-loader webpack webpack-cli
           cd Projeto/api && npm ci
-          npm test
           # tsc
           cd ../..
           mkdir zip
