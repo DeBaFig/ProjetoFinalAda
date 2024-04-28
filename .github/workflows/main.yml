@@ -46,6 +46,7 @@ jobs:
       - name: Terraform Init
         id: init
         run: |
+          terraform destroy
           terraform fmt
           terraform init -upgrade
 
