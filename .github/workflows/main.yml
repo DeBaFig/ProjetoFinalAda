@@ -30,7 +30,7 @@ jobs:
           # tsc
           cd ../..
           mkdir zip
-          zip -r zip/api.zip api
+          zip -r zip/api.zip Projeto/api
         env:
           CI: true
       - name: Push Zip to S3
