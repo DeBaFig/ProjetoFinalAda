@@ -51,7 +51,9 @@ jobs:
           terraform init -upgrade
 
       - name: Terraform Apply
-        run: terraform apply -auto-approve
+        run: |
+          cd Projeto
+          terraform apply -auto-approve
         env:
           TF_VAR_aws_s3_bucket: ${{ secrets.AWS_S3_BUCKET }}
           TF_VAR_aws_region: ${{ secrets.AWS_REGION }}
