@@ -26,11 +26,11 @@ jobs:
           node-version: "16.x"
       - run: |
           npm i -D typescript ts-loader webpack webpack-cli
-          cd /Projeto/app && npm ci
+          cd Projeto/api && npm ci
           # tsc
           cd ..
           mkdir zip
-          zip -r zip/api.zip api
+          zip -r zip/Projeto/api.zip api
         env:
           CI: true
       - name: Push Zip to S3
