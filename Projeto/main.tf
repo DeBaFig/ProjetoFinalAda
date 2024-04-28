@@ -7,7 +7,7 @@ terraform {
   }
   backend "s3" {
     bucket = "bck-projto-cloud-denize"
-    region = "us-west-1"  
+    region = "us-east-1"  
     key    = "terraform.tfstate"
   }
 }
