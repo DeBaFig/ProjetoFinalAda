@@ -26,11 +26,11 @@ jobs:
           node-version: "16"
       - run: |
           npm i -D typescript ts-loader webpack webpack-cli
-          cd Projeto/api && npm ci
+          cd api && npm ci
           # tsc
           cd ../..
           mkdir zip
-          zip -r zip/api.zip Projeto/api
+          zip -r zip/api.zip api
         env:
           CI: true
       - name: Push Zip to S3
@@ -46,13 +46,11 @@ jobs:
       - name: Terraform Init
         id: init
         run: |
-          cd Projeto
           terraform fmt
           terraform init -upgrade
 
       - name: Terraform Apply
         run: |
-          cd Projeto
           terraform apply -auto-approve
         env:
           TF_VAR_aws_s3_bucket: ${{ secrets.AWS_S3_BUCKET }}
