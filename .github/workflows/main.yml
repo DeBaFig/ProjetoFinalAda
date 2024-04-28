@@ -26,7 +26,7 @@ jobs:
           node-version: "16.x"
       - run: |
           npm i -D typescript ts-loader webpack webpack-cli
-          cd Projeto/app && npm ci
+          cd /Projeto/app && npm ci
           # tsc
           cd ..
           mkdir zip
