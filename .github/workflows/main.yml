@@ -51,8 +51,8 @@ jobs:
 
       - name: Terraform Apply
         run: |
-          #terraform apply -auto-approve
-          terraform destroy -auto-approve
+          terraform apply -auto-approve
+          #terraform destroy -auto-approve
         env:
           TF_VAR_aws_s3_bucket: ${{ secrets.AWS_S3_BUCKET }}
           TF_VAR_aws_region: ${{ secrets.AWS_REGION }}
